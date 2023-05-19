@@ -79,13 +79,13 @@ plt.show()
 # %%
 # Hover with dictionary data
 # --------------------------------
-import matplotlib.pyplot as plt
-from numpy.random import rand
-
 fig, ax = plt.subplots()
 x = rand(3)
 y = rand(3)
-ax.plot(x, y, 'o', hover={(x[0], y[0]): "London", (x[1], y[1]): "Paris", (x[2], y[2]): "Barcelona"})
+ax.plot(x, y, 'o', hover={
+    (x[0], y[0]): "London",
+    (x[1], y[1]): "Paris",
+    (x[2], y[2]): "Barcelona"})
 plt.show()
 
 # %%

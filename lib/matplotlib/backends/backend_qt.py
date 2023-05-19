@@ -677,8 +677,6 @@ class NavigationToolbar2QT(NavigationToolbar2, QtWidgets.QToolBar):
                 _enum("QtWidgets.QSizePolicy.Policy").Expanding,
                 _enum("QtWidgets.QSizePolicy.Policy").Ignored,
             ))
-            
-
             self.hover_message = QtWidgets.QLabel("", self)
             self.hover_message.setAlignment(QtCore.Qt.AlignmentFlag(
                 _to_int(_enum("QtCore.Qt.AlignmentFlag").AlignRight) |
@@ -692,9 +690,6 @@ class NavigationToolbar2QT(NavigationToolbar2, QtWidgets.QToolBar):
             
             labelAction = self.addWidget(self.locLabel)
             labelAction.setVisible(True)
-
-        
-
         NavigationToolbar2.__init__(self, canvas)
 
     def _icon(self, name):
@@ -770,7 +765,7 @@ class NavigationToolbar2QT(NavigationToolbar2, QtWidgets.QToolBar):
         self.message.emit(s)
         if self.coordinates:
             self.locLabel.setText(s)
-    
+
     def set_hover_message(self, s):
         self.message.emit(s)
         if self.coordinates:

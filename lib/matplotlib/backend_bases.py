@@ -3023,24 +3023,26 @@ class NavigationToolbar2:
              does not match up with number of labels""")
         else:
             distances = []
-            for a in coor_data: 
-                distances.append(((event.xdata - a[0])**2 + (event.ydata - a[1])**2)**0.5)
-            if(min(distances) < 0.05):
-                return f"Data Label: {hover[distances.index(min(distances))]}" 
-            
+            for a in coor_data:
+                distances.append(((event.xdata - a[0])**2 +
+                                  (event.ydata - a[1])**2)**0.5)
+            if (min(distances) < 0.05):
+                return f"Data Label: {hover[distances.index(min(distances))]}"
+
     def _tooltip_dict(self, event, hover):
         distances = {}
-        for a in hover.keys(): 
+        for a in hover.keys():
             distances[a] = ((event.xdata - a[0])**2 + (event.ydata - a[1])**2)**0.5
-        if(min(distances.values()) < 0.05):
-            return f"Data Label: {hover[min(distances, key=distances.get)]}" 
-        
+        if (min(distances.values()) < 0.05):
+            return f"Data Label: {hover[min(distances, key=distances.get)]}"
+
     def mouse_move(self, event):
         self._update_cursor(event)
         self.set_message(self._mouse_event_to_message(event))
 
         if callable(getattr(self, 'set_hover_message', None)):
-            for a in self.canvas.figure.findobj(match=self._nonrect, include_self=False):
+            for a in self.canvas.figure.findobj(match=self._nonrect, 
+                                                include_self=False):
                 inside, prop = a.contains(event)
                 if inside:
                     if a.hoverable():

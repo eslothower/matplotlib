@@ -469,6 +469,7 @@ class ToolbarGTK3(ToolContainerBase, Gtk.Box):
 
     def set_message(self, s):
         self._message.set_label(s)
+
     def set_hover_message(self, s):
         self._hover_message.set_label(s)
 

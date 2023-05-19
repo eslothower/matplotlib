@@ -425,9 +425,6 @@ class ToolbarGTK4(ToolContainerBase, Gtk.Box):
         self._message.set_justify(Gtk.Justification.RIGHT)
         self.append(self._message)
 
-        # self._hover_message = Gtk.Label()
-        # self._hover_message.set_justify(Gtk.Justification.RIGHT)
-        # self.append(self._hover_message)
 
     def add_toolitem(self, name, group, position, image_file, description,
                      toggle):
@@ -499,11 +496,8 @@ class ToolbarGTK4(ToolContainerBase, Gtk.Box):
         self._tool_box.append(sep)
 
     def set_message(self, s):
-        # self._message.set_label(s)
-        self._message.set_label('hiiiii')
-        # self._hover_message.set_label(s)
+        self._message.set_label(s)
 
-        
     def set_hover_message(self, s):
         self._hover_message.set_label(s)
 

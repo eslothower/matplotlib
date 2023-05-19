@@ -273,6 +273,7 @@ class _NavigationToolbar2GTK(NavigationToolbar2):
     def set_message(self, s):
         escaped = GLib.markup_escape_text(s)
         self.message.set_markup(f'<small>{escaped}</small>')
+
     def set_hover_message(self, s):
         escaped = GLib.markup_escape_text(s)
         self.hover_message.set_markup(f'<small>{escaped}</small>')
