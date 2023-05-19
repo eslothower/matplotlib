@@ -425,7 +425,6 @@ class ToolbarGTK4(ToolContainerBase, Gtk.Box):
         self._message.set_justify(Gtk.Justification.RIGHT)
         self.append(self._message)
 
-
     def add_toolitem(self, name, group, position, image_file, description,
                      toggle):
         if toggle:

@@ -687,7 +687,7 @@ class NavigationToolbar2QT(NavigationToolbar2, QtWidgets.QToolBar):
             ))
             labelActionHover = self.addWidget(self.hover_message)
             labelActionHover.setVisible(True)
-            
+
             labelAction = self.addWidget(self.locLabel)
             labelAction.setVisible(True)
         NavigationToolbar2.__init__(self, canvas)
